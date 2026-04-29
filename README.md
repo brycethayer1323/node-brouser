@@ -1,4 +1,4 @@
 # `node-brouser`
 ~--------------~
 
-this repo is a bouser made with (node)[nodejs.org]
+this repo is a bouser made with [nodejs.org](node)
