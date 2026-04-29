@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>node-brouser</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Title Bar -->
+  <div id="titlebar">
+    <div id="titlebar-drag">
+      <span id="titlebar-label">node-brouser</span>
+    </div>
+    <div id="titlebar-buttons">
+      <button id="btn-min" title="Minimize">&#x2014;</button>
+      <button id="btn-max" title="Maximize">&#9723;</button>
+      <button id="btn-close" title="Close">&#10005;</button>
+    </div>
+  </div>
+
+  <!-- Tab Bar -->
+  <div id="tabbar">
+    <div id="tabs"></div>
+    <button id="btn-new-tab" title="New Tab">+</button>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div id="navbar">
+    <button id="btn-back" title="Back">&#9664;</button>
+    <button id="btn-forward" title="Forward">&#9654;</button>
+    <button id="btn-reload" title="Reload">&#8635;</button>
+    <input id="url-bar" type="text" placeholder="Search or enter URL..." spellcheck="false">
+    <button id="btn-go" title="Go">&#10132;</button>
+    <button id="btn-save-page" title="Save Page Locally">&#128190;</button>
+    <button id="btn-saved-pages" title="Saved Pages">&#128218;</button>
+    <button id="btn-bookmarks" title="Bookmarks">&#9733;</button>
+    <button id="btn-sidebar-toggle" title="Toggle Sidebar">&#9776;</button>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <!-- Sidebar -->
+    <div id="sidebar" class="hidden">
+      <div id="sidebar-header">
+        <span>Sidebar</span>
+        <button id="sidebar-close">&#10005;</button>
+      </div>
+      <div id="sidebar-tabs"></div>
+      <div id="sidebar-content">
+        <webview id="sidebar-webview" src="about:blank"></webview>
+      </div>
+    </div>
+
+    <!-- Browser Views Container -->
+    <div id="browser-container">
+      <!-- webviews injected here -->
+    </div>
+  </div>
+
+  <!-- Saved Pages Panel (overlay) -->
+  <div id="saved-pages-panel" class="panel hidden">
+    <div class="panel-header">
+      <h3>Saved Pages</h3>
+      <button class="panel-close">&#10005;</button>
+    </div>
+    <div id="saved-pages-list"></div>
+  </div>
+
+  <!-- Bookmarks Panel (overlay) -->
+  <div id="bookmarks-panel" class="panel hidden">
+    <div class="panel-header">
+      <h3>Bookmarks</h3>
+      <button class="panel-close">&#10005;</button>
+    </div>
+    <div id="bookmarks-list"></div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

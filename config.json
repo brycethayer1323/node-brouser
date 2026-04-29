@@ -1,0 +1,26 @@
+{
+  "addons": {},
+  "allowed": {
+    "javascript": true,
+    "popups": false,
+    "notifications": true,
+    "fullscreen": true,
+    "devtools": true,
+    "local_saving": true,
+    "embedded_urls": true
+  },
+  "removed": {},
+  "sidebar": {
+    "copilot": true,
+    "gemini": false,
+    "le_chat": false,
+    "local": false
+  },
+  "embedded_urls": [
+    { "name": "Google", "url": "https://www.google.com" },
+    { "name": "GitHub", "url": "https://github.com" },
+    { "name": "YouTube", "url": "https://www.youtube.com" }
+  ],
+  "homepage": "https://www.google.com",
+  "theme": "dark"
+}
